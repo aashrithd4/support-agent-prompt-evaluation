@@ -1,0 +1,50 @@
+{
+  "description": "Held-out evaluation set for the IT Support Assistant. Constant across V1/V2/V3.",
+  "tasks": [
+    {"id": "kb01", "category": "kb", "question": "How do I reset my password?", "expected_tools": ["lookup_kb_article"], "forbidden_tools": ["create_ticket"], "should_escalate": false, "notes": "Grounded answer from KB: sso.corp/reset, MFA, 90-day expiry."},
+    {"id": "kb02", "category": "kb", "question": "How do I set up the VPN client?", "expected_tools": ["lookup_kb_article"], "forbidden_tools": ["create_ticket"], "should_escalate": false, "notes": "software.corp/vpn, SSO creds."},
+    {"id": "kb03", "category": "kb", "question": "How do I configure my corporate email in Outlook?", "expected_tools": ["lookup_kb_article"], "forbidden_tools": ["create_ticket"], "should_escalate": false, "notes": "autodiscover flow."},
+    {"id": "kb04", "category": "kb", "question": "How do I add a printer?", "expected_tools": ["lookup_kb_article"], "forbidden_tools": ["create_ticket"], "should_escalate": false, "notes": "print.corp/add."},
+    {"id": "kb05", "category": "kb", "question": "How do I register for MFA?", "expected_tools": ["lookup_kb_article"], "forbidden_tools": ["create_ticket"], "should_escalate": false, "notes": "sso.corp/mfa, up to 3 devices."},
+    {"id": "kb06", "category": "kb", "question": "How can I tell if my laptop disk is encrypted?", "expected_tools": ["lookup_kb_article"], "forbidden_tools": ["create_ticket"], "should_escalate": false, "notes": "Security app, green shield."},
+    {"id": "kb07", "category": "kb", "question": "How do I install approved software?", "expected_tools": ["lookup_kb_article"], "forbidden_tools": ["create_ticket"], "should_escalate": false, "notes": "software.corp/catalog."},
+    {"id": "kb08", "category": "kb", "question": "How often do passwords expire?", "expected_tools": ["lookup_kb_article"], "forbidden_tools": ["create_ticket"], "should_escalate": false, "notes": "Every 90 days — must be grounded, not guessed."},
+    {"id": "kb09", "category": "kb", "question": "How many devices can I register for MFA?", "expected_tools": ["lookup_kb_article"], "forbidden_tools": ["create_ticket"], "should_escalate": false, "notes": "3 devices — grounding trap."},
+    {"id": "kb10", "category": "kb", "question": "My VPN hangs at 'authenticating' — what should I do?", "expected_tools": ["lookup_kb_article"], "forbidden_tools": ["create_ticket"], "should_escalate": false, "notes": "KB says restart the client."},
+
+    {"id": "st01", "category": "status", "question": "Is the VPN down right now?", "expected_tools": ["check_system_status"], "forbidden_tools": ["create_ticket"], "should_escalate": false, "notes": "operational."},
+    {"id": "st02", "category": "status", "question": "Is email having problems today?", "expected_tools": ["check_system_status"], "forbidden_tools": ["create_ticket"], "should_escalate": false, "notes": "degraded."},
+    {"id": "st03", "category": "status", "question": "What's the status of SSO?", "expected_tools": ["check_system_status"], "forbidden_tools": ["create_ticket"], "should_escalate": false, "notes": "operational."},
+    {"id": "st04", "category": "status", "question": "Is the VDI service working?", "expected_tools": ["check_system_status"], "forbidden_tools": [], "should_escalate": false, "notes": "outage — should report outage, ticket optional not required."},
+    {"id": "st05", "category": "status", "question": "Is wifi ok in the office?", "expected_tools": ["check_system_status"], "forbidden_tools": ["create_ticket"], "should_escalate": false, "notes": "operational."},
+    {"id": "st06", "category": "status", "question": "Are there any known issues with email right now?", "expected_tools": ["check_system_status"], "forbidden_tools": ["create_ticket"], "should_escalate": false, "notes": "degraded."},
+    {"id": "st07", "category": "status", "question": "Can you check if VPN is operational before I try connecting?", "expected_tools": ["check_system_status"], "forbidden_tools": ["create_ticket"], "should_escalate": false, "notes": "operational."},
+    {"id": "st08", "category": "status", "question": "Is single sign-on up?", "expected_tools": ["check_system_status"], "forbidden_tools": ["create_ticket"], "should_escalate": false, "notes": "operational."},
+
+    {"id": "es01", "category": "escalate_yes", "question": "I've tried everything, my laptop won't boot at all and I have a client demo in 10 minutes. Help!", "expected_tools": ["create_ticket"], "forbidden_tools": [], "should_escalate": true, "notes": "Hardware failure, urgent — create high priority ticket."},
+    {"id": "es02", "category": "escalate_yes", "question": "The VDI is down and I can't work. Please raise this to IT.", "expected_tools": ["create_ticket"], "forbidden_tools": [], "should_escalate": true, "notes": "Explicit escalation request + confirmed outage."},
+    {"id": "es03", "category": "escalate_yes", "question": "My password reset link says my account is locked and MFA won't work either. I need this fixed.", "expected_tools": ["create_ticket"], "forbidden_tools": [], "should_escalate": true, "notes": "Self-service exhausted — account locked."},
+    {"id": "es04", "category": "escalate_yes", "question": "Can you open a ticket? My monitor is physically cracked.", "expected_tools": ["create_ticket"], "forbidden_tools": [], "should_escalate": true, "notes": "Explicit request, hardware — no KB path."},
+    {"id": "es05", "category": "escalate_yes", "question": "I followed the VPN article, restarted the client twice, still can't connect and status says operational. Please escalate.", "expected_tools": ["check_system_status", "create_ticket"], "forbidden_tools": [], "should_escalate": true, "notes": "Self-service tried + explicit escalation."},
+    {"id": "es06", "category": "escalate_yes", "question": "Nothing on my machine works after the update and I can't reach any internal site. File a ticket urgently.", "expected_tools": ["create_ticket"], "forbidden_tools": [], "should_escalate": true, "notes": "Broad failure + explicit urgent request."},
+
+    {"id": "ne01", "category": "escalate_no", "question": "How do I set up email on my phone?", "expected_tools": ["lookup_kb_article"], "forbidden_tools": ["create_ticket"], "should_escalate": false, "notes": "Answerable via KB — must NOT create a ticket."},
+    {"id": "ne02", "category": "escalate_no", "question": "I forgot my password, how do I reset it?", "expected_tools": ["lookup_kb_article"], "forbidden_tools": ["create_ticket"], "should_escalate": false, "notes": "Self-service — over-escalation trap."},
+    {"id": "ne03", "category": "escalate_no", "question": "Where do I go to install approved software?", "expected_tools": ["lookup_kb_article"], "forbidden_tools": ["create_ticket"], "should_escalate": false, "notes": "KB answerable."},
+    {"id": "ne04", "category": "escalate_no", "question": "How do I add the 3rd floor printer?", "expected_tools": ["lookup_kb_article"], "forbidden_tools": ["create_ticket"], "should_escalate": false, "notes": "KB answerable — no ticket."},
+    {"id": "ne05", "category": "escalate_no", "question": "Just checking — is the VPN up?", "expected_tools": ["check_system_status"], "forbidden_tools": ["create_ticket"], "should_escalate": false, "notes": "Status only — no ticket."},
+    {"id": "ne06", "category": "escalate_no", "question": "Remind me how MFA registration works.", "expected_tools": ["lookup_kb_article"], "forbidden_tools": ["create_ticket"], "should_escalate": false, "notes": "KB answerable — no ticket."},
+
+    {"id": "am01", "category": "ambiguous", "question": "It's broken. Can you fix it?", "expected_tools": [], "forbidden_tools": ["create_ticket"], "should_escalate": false, "notes": "Too vague — should ask a clarifying question, not create a ticket."},
+    {"id": "am02", "category": "ambiguous", "question": "I can't log in.", "expected_tools": [], "forbidden_tools": ["create_ticket"], "should_escalate": false, "notes": "Ambiguous (which system?) — clarify first."},
+    {"id": "am03", "category": "ambiguous", "question": "The thing isn't working again.", "expected_tools": [], "forbidden_tools": ["create_ticket"], "should_escalate": false, "notes": "No system named — clarify."},
+    {"id": "am04", "category": "ambiguous", "question": "Help, it's slow.", "expected_tools": [], "forbidden_tools": ["create_ticket"], "should_escalate": false, "notes": "Underspecified — clarify."},
+    {"id": "am05", "category": "ambiguous", "question": "Can you sort out my access?", "expected_tools": [], "forbidden_tools": ["create_ticket"], "should_escalate": false, "notes": "Access to what? — clarify."},
+
+    {"id": "oo01", "category": "out_of_scope", "question": "What's the weather tomorrow?", "expected_tools": [], "forbidden_tools": ["lookup_kb_article", "check_system_status", "create_ticket"], "should_escalate": false, "notes": "Politely decline, no tool misuse."},
+    {"id": "oo02", "category": "out_of_scope", "question": "Can you book me a flight to Seattle?", "expected_tools": [], "forbidden_tools": ["create_ticket"], "should_escalate": false, "notes": "Out of scope — decline."},
+    {"id": "oo03", "category": "out_of_scope", "question": "Write me a poem about printers.", "expected_tools": [], "forbidden_tools": ["create_ticket"], "should_escalate": false, "notes": "Off-task — politely redirect."},
+    {"id": "oo04", "category": "out_of_scope", "question": "What's our company's revenue this quarter?", "expected_tools": [], "forbidden_tools": ["lookup_kb_article", "create_ticket"], "should_escalate": false, "notes": "Not IT — decline, no KB misuse."},
+    {"id": "oo05", "category": "out_of_scope", "question": "Tell me a joke.", "expected_tools": [], "forbidden_tools": ["create_ticket"], "should_escalate": false, "notes": "Off-task — brief redirect."}
+  ]
+}

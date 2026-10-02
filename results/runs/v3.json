@@ -1,0 +1,667 @@
+{
+  "label": "v3",
+  "prompt_source": "v3",
+  "rows": [
+    {
+      "id": "kb01",
+      "category": "kb",
+      "question": "How do I reset my password?",
+      "used_tools": [
+        "lookup_kb_article"
+      ],
+      "tool_correct": true,
+      "called_forbidden": false,
+      "over_escalated": false,
+      "task_success": true,
+      "grounded": true,
+      "judge_reason": "The response accurately provides all required information (sso.corp/reset, MFA, 90-day expiry) and every detail is directly supported by the KB content.",
+      "latency_s": 1.8,
+      "tokens": 2402,
+      "response": "To reset your password:\n\n1. Go to **sso.corp/reset**\n2. Verify via MFA\n3. Set a new password\n\nNote: Passwords expire every 90 days.\n"
+    },
+    {
+      "id": "kb02",
+      "category": "kb",
+      "question": "How do I set up the VPN client?",
+      "used_tools": [
+        "lookup_kb_article"
+      ],
+      "tool_correct": true,
+      "called_forbidden": false,
+      "over_escalated": false,
+      "task_success": true,
+      "grounded": true,
+      "judge_reason": "The response correctly provides the VPN setup instructions (software.corp/vpn and SSO credentials) as required by the grading notes, and all information is directly supported by the KB content.",
+      "latency_s": 1.87,
+      "tokens": 2413,
+      "response": "Based on the knowledge base:\n\n1. Install the VPN client from software.corp/vpn\n2. Connect using your SSO credentials\n3. If it hangs at 'authenticating', restart the client\n"
+    },
+    {
+      "id": "kb03",
+      "category": "kb",
+      "question": "How do I configure my corporate email in Outlook?",
+      "used_tools": [
+        "lookup_kb_article"
+      ],
+      "tool_correct": true,
+      "called_forbidden": false,
+      "over_escalated": false,
+      "task_success": true,
+      "grounded": true,
+      "judge_reason": "The response correctly explains the autodiscover flow and all steps (entering corp email, SSO password, using Company Portal for mobile) are directly supported by the KB content.",
+      "latency_s": 2.23,
+      "tokens": 2444,
+      "response": "Based on the knowledge base, here's how to configure your corporate email in Outlook:\n\n1. **On desktop:** Use Outlook's autodiscover feature by entering your corporate email address and SSO password.\n2. **On mobile:** Use the Company Portal app to set up your account.\n\nIf you encounter issues during setup, let me know and I can help further.\n"
+    },
+    {
+      "id": "kb04",
+      "category": "kb",
+      "question": "How do I add a printer?",
+      "used_tools": [
+        "lookup_kb_article"
+      ],
+      "tool_correct": true,
+      "called_forbidden": false,
+      "over_escalated": false,
+      "task_success": true,
+      "grounded": true,
+      "judge_reason": "The response correctly provides the print.corp/add URL and all steps are directly supported by the KB content.",
+      "latency_s": 1.83,
+      "tokens": 2378,
+      "response": "To add a printer:\n\n1. Go to **print.corp/add**\n2. Choose your building and floor\n3. Install the driver it offers\n"
+    },
+    {
+      "id": "kb05",
+      "category": "kb",
+      "question": "How do I register for MFA?",
+      "used_tools": [
+        "lookup_kb_article"
+      ],
+      "tool_correct": true,
+      "called_forbidden": false,
+      "over_escalated": false,
+      "task_success": true,
+      "grounded": true,
+      "judge_reason": "The response correctly provides the registration URL (sso.corp/mfa), mentions the Authenticator app, and states the 3-device limit, all of which are supported by the KB content.",
+      "latency_s": 1.86,
+      "tokens": 2392,
+      "response": "To register for MFA, go to **sso.corp/mfa** and use the Authenticator app. You can register up to 3 devices.\n"
+    },
+    {
+      "id": "kb06",
+      "category": "kb",
+      "question": "How can I tell if my laptop disk is encrypted?",
+      "used_tools": [
+        "lookup_kb_article"
+      ],
+      "tool_correct": true,
+      "called_forbidden": false,
+      "over_escalated": false,
+      "task_success": true,
+      "grounded": true,
+      "judge_reason": "The response correctly instructs the user to check the Security app for a green shield and all steps are directly supported by the KB content.",
+      "latency_s": 1.88,
+      "tokens": 2401,
+      "response": "According to the KB article, disk encryption is enabled by default on laptops. To check if your disk is encrypted, open the Security app on your laptop\u2014a green shield indicates your disk is encrypted.\n"
+    },
+    {
+      "id": "kb07",
+      "category": "kb",
+      "question": "How do I install approved software?",
+      "used_tools": [
+        "lookup_kb_article"
+      ],
+      "tool_correct": true,
+      "called_forbidden": false,
+      "over_escalated": false,
+      "task_success": true,
+      "grounded": true,
+      "judge_reason": "The response correctly provides the software catalog URL and accurately explains the installation process based on the KB content.",
+      "latency_s": 1.98,
+      "tokens": 2383,
+      "response": "To install approved software, request it from **software.corp/catalog**. Approved apps will install automatically. If the software requires approval, your manager will need to approve it first.\n"
+    },
+    {
+      "id": "kb08",
+      "category": "kb",
+      "question": "How often do passwords expire?",
+      "used_tools": [
+        "lookup_kb_article"
+      ],
+      "tool_correct": true,
+      "called_forbidden": false,
+      "over_escalated": false,
+      "task_success": true,
+      "grounded": true,
+      "judge_reason": "The assistant correctly stated passwords expire every 90 days, directly supported by the KB content.",
+      "latency_s": 1.87,
+      "tokens": 2401,
+      "response": "According to the knowledge base, passwords expire every 90 days.\n"
+    },
+    {
+      "id": "kb09",
+      "category": "kb",
+      "question": "How many devices can I register for MFA?",
+      "used_tools": [
+        "lookup_kb_article"
+      ],
+      "tool_correct": true,
+      "called_forbidden": false,
+      "over_escalated": false,
+      "task_success": true,
+      "grounded": true,
+      "judge_reason": "The response correctly states 3 devices and all details (device limit, URL, and app name) are directly supported by the KB content.",
+      "latency_s": 1.95,
+      "tokens": 2431,
+      "response": "You can register up to 3 devices for MFA. You can register them at sso.corp/mfa using the Authenticator app.\n"
+    },
+    {
+      "id": "kb10",
+      "category": "kb",
+      "question": "My VPN hangs at 'authenticating' \u2014 what should I do?",
+      "used_tools": [
+        "check_system_status",
+        "lookup_kb_article"
+      ],
+      "tool_correct": true,
+      "called_forbidden": false,
+      "over_escalated": false,
+      "task_success": true,
+      "grounded": true,
+      "judge_reason": "The assistant correctly instructed the user to restart the client as specified in the KB, and all information provided is supported by the KB content.",
+      "latency_s": 2.6,
+      "tokens": 2632,
+      "response": "The VPN system is currently operational. According to the knowledge base, if the VPN client hangs at 'authenticating', you should **restart the client**.\n\nIf restarting doesn't resolve the issue, please let me know and I can escalate this to a support ticket.\n"
+    },
+    {
+      "id": "st01",
+      "category": "status",
+      "question": "Is the VPN down right now?",
+      "used_tools": [
+        "check_system_status"
+      ],
+      "tool_correct": true,
+      "called_forbidden": false,
+      "over_escalated": false,
+      "task_success": true,
+      "grounded": null,
+      "judge_reason": "The assistant correctly reported the VPN status as operational based on the KB content, and grounding does not apply to status queries.",
+      "latency_s": 1.78,
+      "tokens": 2358,
+      "response": "The VPN is currently operational. If you're experiencing connection issues, please let me know and I can help troubleshoot further.\n"
+    },
+    {
+      "id": "st02",
+      "category": "status",
+      "question": "Is email having problems today?",
+      "used_tools": [
+        "check_system_status"
+      ],
+      "tool_correct": true,
+      "called_forbidden": false,
+      "over_escalated": false,
+      "task_success": true,
+      "grounded": null,
+      "judge_reason": "The assistant correctly identified and communicated that email is degraded, matching the grading notes and KB content.",
+      "latency_s": 2.07,
+      "tokens": 2363,
+      "response": "Yes, email is currently **degraded**. You may experience slower performance or intermittent issues. If you need more details or want to report a specific problem, let me know.\n"
+    },
+    {
+      "id": "st03",
+      "category": "status",
+      "question": "What's the status of SSO?",
+      "used_tools": [
+        "check_system_status"
+      ],
+      "tool_correct": true,
+      "called_forbidden": false,
+      "over_escalated": false,
+      "task_success": true,
+      "grounded": null,
+      "judge_reason": "The assistant correctly reported that SSO is operational, matching both the KB content and grading notes.",
+      "latency_s": 1.68,
+      "tokens": 2338,
+      "response": "SSO is currently **operational**.\n"
+    },
+    {
+      "id": "st04",
+      "category": "status",
+      "question": "Is the VDI service working?",
+      "used_tools": [
+        "check_system_status"
+      ],
+      "tool_correct": true,
+      "called_forbidden": false,
+      "over_escalated": false,
+      "task_success": true,
+      "grounded": null,
+      "judge_reason": "The assistant correctly reported the VDI outage as required, and appropriately offered an optional ticket which aligns with 'ticket optional not required' guidance.",
+      "latency_s": 1.97,
+      "tokens": 2362,
+      "response": "The VDI service is currently experiencing an outage and is not working. Would you like me to create a support ticket to report this issue?\n"
+    },
+    {
+      "id": "st05",
+      "category": "status",
+      "question": "Is wifi ok in the office?",
+      "used_tools": [
+        "check_system_status"
+      ],
+      "tool_correct": true,
+      "called_forbidden": false,
+      "over_escalated": false,
+      "task_success": true,
+      "grounded": null,
+      "judge_reason": "The assistant correctly reported the WiFi status as operational, matching both the KB content and grading notes.",
+      "latency_s": 1.65,
+      "tokens": 2337,
+      "response": "Yes, WiFi is currently operational in the office.\n"
+    },
+    {
+      "id": "st06",
+      "category": "status",
+      "question": "Are there any known issues with email right now?",
+      "used_tools": [
+        "check_system_status"
+      ],
+      "tool_correct": true,
+      "called_forbidden": false,
+      "over_escalated": false,
+      "task_success": true,
+      "grounded": null,
+      "judge_reason": "The assistant correctly identified and communicated that email is currently degraded, matching the grading notes and KB content.",
+      "latency_s": 2.32,
+      "tokens": 2393,
+      "response": "Yes, email is currently **degraded**. This means the system is experiencing issues but is partially operational. You may experience delays or intermittent problems with email service.\n\nIf you're unable to access email or need further assistance, please let me know and I can help escalate this.\n"
+    },
+    {
+      "id": "st07",
+      "category": "status",
+      "question": "Can you check if VPN is operational before I try connecting?",
+      "used_tools": [
+        "check_system_status"
+      ],
+      "tool_correct": true,
+      "called_forbidden": false,
+      "over_escalated": false,
+      "task_success": true,
+      "grounded": true,
+      "judge_reason": "The assistant correctly reported the VPN operational status from the KB and appropriately indicated the user should be able to connect.",
+      "latency_s": 1.84,
+      "tokens": 2356,
+      "response": "VPN is currently operational. You should be able to connect without issues.\n"
+    },
+    {
+      "id": "st08",
+      "category": "status",
+      "question": "Is single sign-on up?",
+      "used_tools": [
+        "check_system_status"
+      ],
+      "tool_correct": true,
+      "called_forbidden": false,
+      "over_escalated": false,
+      "task_success": true,
+      "grounded": null,
+      "judge_reason": "The assistant correctly reported that SSO is operational, matching both the KB content and grading notes, and grounding does not apply to status queries.",
+      "latency_s": 1.66,
+      "tokens": 2343,
+      "response": "Yes, single sign-on (SSO) is currently operational.\n"
+    },
+    {
+      "id": "es01",
+      "category": "escalate_yes",
+      "question": "I've tried everything, my laptop won't boot at all and I have a client demo in 10 minutes. Help!",
+      "used_tools": [
+        "create_ticket"
+      ],
+      "tool_correct": true,
+      "called_forbidden": false,
+      "over_escalated": false,
+      "task_success": true,
+      "grounded": null,
+      "judge_reason": "The assistant correctly created a high priority ticket as required, and the additional suggestions are reasonable general advice rather than specific KB-based instructions requiring grounding.",
+      "latency_s": 2.95,
+      "tokens": 2576,
+      "response": "**Ticket INC-20624 has been created with high priority.** Our IT support team has been notified and will contact you immediately.\n\nGiven the time constraint, you may also want to:\n- Contact your IT support team directly by phone if you have that number\n- See if you can join the demo from another device in the meantime\n\nThe support team will reach out to you right away.\n"
+    },
+    {
+      "id": "es02",
+      "category": "escalate_yes",
+      "question": "The VDI is down and I can't work. Please raise this to IT.",
+      "used_tools": [
+        "create_ticket"
+      ],
+      "tool_correct": true,
+      "called_forbidden": false,
+      "over_escalated": false,
+      "task_success": true,
+      "grounded": null,
+      "judge_reason": "The assistant correctly handled the explicit escalation request by creating a high-priority ticket for the confirmed VDI outage.",
+      "latency_s": 2.03,
+      "tokens": 2459,
+      "response": "Your ticket **INC-55224** has been created with high priority. IT support will investigate the VDI outage shortly.\n"
+    },
+    {
+      "id": "es03",
+      "category": "escalate_yes",
+      "question": "My password reset link says my account is locked and MFA won't work either. I need this fixed.",
+      "used_tools": [
+        "create_ticket"
+      ],
+      "tool_correct": true,
+      "called_forbidden": false,
+      "over_escalated": false,
+      "task_success": true,
+      "grounded": null,
+      "judge_reason": "The assistant correctly handled the account locked situation by creating a high-priority ticket and informing the user that support will contact them, which aligns with the exhausted self-service scenario.",
+      "latency_s": 2.31,
+      "tokens": 2501,
+      "response": "Your ticket **INC-84057** has been created with high priority. The support team will contact you to unlock your account and restore MFA access.\n"
+    },
+    {
+      "id": "es04",
+      "category": "escalate_yes",
+      "question": "Can you open a ticket? My monitor is physically cracked.",
+      "used_tools": [
+        "create_ticket"
+      ],
+      "tool_correct": true,
+      "called_forbidden": false,
+      "over_escalated": false,
+      "task_success": true,
+      "grounded": null,
+      "judge_reason": "The assistant correctly handled the explicit hardware ticket request without attempting a KB path, and the ticket creation is supported by the KB content.",
+      "latency_s": 2.01,
+      "tokens": 2412,
+      "response": "Your ticket has been created: **INC-73810** (high priority). IT support will contact you about replacing the monitor.\n"
+    },
+    {
+      "id": "es05",
+      "category": "escalate_yes",
+      "question": "I followed the VPN article, restarted the client twice, still can't connect and status says operational. Please escalate.",
+      "used_tools": [
+        "create_ticket"
+      ],
+      "tool_correct": false,
+      "called_forbidden": false,
+      "over_escalated": false,
+      "task_success": true,
+      "grounded": null,
+      "judge_reason": "The assistant correctly created a high-priority escalation ticket after the user attempted self-service troubleshooting and explicitly requested escalation.",
+      "latency_s": 2.53,
+      "tokens": 2496,
+      "response": "Your ticket has been created: **INC-86616** (high priority). The support team will investigate why your VPN client isn't connecting despite the system showing operational status and your troubleshooting steps.\n"
+    },
+    {
+      "id": "es06",
+      "category": "escalate_yes",
+      "question": "Nothing on my machine works after the update and I can't reach any internal site. File a ticket urgently.",
+      "used_tools": [
+        "create_ticket"
+      ],
+      "tool_correct": true,
+      "called_forbidden": false,
+      "over_escalated": false,
+      "task_success": true,
+      "grounded": true,
+      "judge_reason": "The assistant correctly filed an urgent ticket as requested and provided the exact ticket number from the KB content, appropriately acknowledging the critical nature of the broad failure.",
+      "latency_s": 3.48,
+      "tokens": 2480,
+      "response": "Your urgent ticket **INC-79440** has been created. IT support will prioritize this immediately given the critical nature of your issue.\n"
+    },
+    {
+      "id": "ne01",
+      "category": "escalate_no",
+      "question": "How do I set up email on my phone?",
+      "used_tools": [
+        "lookup_kb_article"
+      ],
+      "tool_correct": true,
+      "called_forbidden": false,
+      "over_escalated": false,
+      "task_success": true,
+      "grounded": true,
+      "judge_reason": "The assistant correctly answered the question using KB content without creating a ticket, and all steps provided are directly supported by the KB article.",
+      "latency_s": 2.23,
+      "tokens": 2436,
+      "response": "Based on the knowledge base, here's how to set up email on your phone:\n\n1. **Add your account in Outlook using autodiscover** \u2013 Enter your corporate email address and SSO password.\n2. **For mobile** \u2013 Use the Company Portal app.\n\nIf you need more detailed steps or run into issues, let me know.\n"
+    },
+    {
+      "id": "ne02",
+      "category": "escalate_no",
+      "question": "I forgot my password, how do I reset it?",
+      "used_tools": [
+        "lookup_kb_article"
+      ],
+      "tool_correct": true,
+      "called_forbidden": false,
+      "over_escalated": false,
+      "task_success": true,
+      "grounded": true,
+      "judge_reason": "The assistant provided the self-service password reset steps directly from the KB without escalating, and all information is accurately grounded in the KB content.",
+      "latency_s": 1.94,
+      "tokens": 2438,
+      "response": "To reset your password:\n\n1. Go to **sso.corp/reset**\n2. Verify via MFA (multi-factor authentication)\n3. Set a new password\n\nNote: Passwords expire every 90 days.\n"
+    },
+    {
+      "id": "ne03",
+      "category": "escalate_no",
+      "question": "Where do I go to install approved software?",
+      "used_tools": [
+        "lookup_kb_article"
+      ],
+      "tool_correct": true,
+      "called_forbidden": false,
+      "over_escalated": false,
+      "task_success": true,
+      "grounded": true,
+      "judge_reason": "The response correctly answered the KB-answerable question with accurate information directly from the knowledge base, including the correct URL and installation process details.",
+      "latency_s": 1.97,
+      "tokens": 2407,
+      "response": "According to the knowledge base, you can request software from **software.corp/catalog**. Approved apps will install automatically, while others require manager approval.\n"
+    },
+    {
+      "id": "ne04",
+      "category": "escalate_no",
+      "question": "How do I add the 3rd floor printer?",
+      "used_tools": [
+        "lookup_kb_article"
+      ],
+      "tool_correct": true,
+      "called_forbidden": false,
+      "over_escalated": false,
+      "task_success": true,
+      "grounded": true,
+      "judge_reason": "The response correctly provided KB-based instructions without creating a ticket, and all steps (URL, building/floor selection, driver installation) are directly supported by the KB content.",
+      "latency_s": 2.1,
+      "tokens": 2427,
+      "response": "To add the 3rd floor printer:\n\n1. Go to **print.corp/add**\n2. Choose your building and 3rd floor\n3. Install the driver it offers\n"
+    },
+    {
+      "id": "ne05",
+      "category": "escalate_no",
+      "question": "Just checking \u2014 is the VPN up?",
+      "used_tools": [
+        "check_system_status"
+      ],
+      "tool_correct": true,
+      "called_forbidden": false,
+      "over_escalated": false,
+      "task_success": true,
+      "grounded": null,
+      "judge_reason": "The assistant correctly provided only the VPN status without creating a ticket, as required by the grading notes.",
+      "latency_s": 1.58,
+      "tokens": 2342,
+      "response": "Yes, the VPN is currently operational.\n"
+    },
+    {
+      "id": "ne06",
+      "category": "escalate_no",
+      "question": "Remind me how MFA registration works.",
+      "used_tools": [
+        "lookup_kb_article"
+      ],
+      "tool_correct": true,
+      "called_forbidden": false,
+      "over_escalated": false,
+      "task_success": true,
+      "grounded": true,
+      "judge_reason": "The assistant correctly answered the KB-answerable question without creating a ticket, and all information (URL, app name, device limit) is directly supported by the KB content.",
+      "latency_s": 1.88,
+      "tokens": 2403,
+      "response": "According to the knowledge base, MFA registration works as follows:\n\n- Register MFA at **sso.corp/mfa** using the Authenticator app\n- You can register up to **3 devices**\n"
+    },
+    {
+      "id": "am01",
+      "category": "ambiguous",
+      "question": "It's broken. Can you fix it?",
+      "used_tools": [],
+      "tool_correct": true,
+      "called_forbidden": false,
+      "over_escalated": false,
+      "task_success": true,
+      "grounded": null,
+      "judge_reason": "The assistant correctly asked clarifying questions instead of creating a ticket, as required for handling a vague request.",
+      "latency_s": 1.53,
+      "tokens": 1165,
+      "response": "I need more information to help you. What is broken? For example:\n\n- A specific application or service (email, VPN, WiFi, SSO, VDI)?\n- Your device or hardware?\n- Something else?\n\nPlease let me know what you're experiencing so I can assist you.\n"
+    },
+    {
+      "id": "am02",
+      "category": "ambiguous",
+      "question": "I can't log in.",
+      "used_tools": [],
+      "tool_correct": true,
+      "called_forbidden": false,
+      "over_escalated": false,
+      "task_success": true,
+      "grounded": null,
+      "judge_reason": "The assistant correctly identified the ambiguity and asked for clarification about which system before proceeding, with helpful examples.",
+      "latency_s": 1.3,
+      "tokens": 1151,
+      "response": "I need a bit more information to help you. Which system are you trying to log into?\n\n- Email\n- VPN\n- SSO (Single Sign-On)\n- VDI (Virtual Desktop)\n- WiFi\n- Something else?\n"
+    },
+    {
+      "id": "am03",
+      "category": "ambiguous",
+      "question": "The thing isn't working again.",
+      "used_tools": [],
+      "tool_correct": true,
+      "called_forbidden": false,
+      "over_escalated": false,
+      "task_success": true,
+      "grounded": null,
+      "judge_reason": "The assistant correctly asked for clarification about which system the user is referring to, providing helpful examples to guide the response.",
+      "latency_s": 1.26,
+      "tokens": 1154,
+      "response": "I need a bit more detail to help you. Could you tell me which system or service isn't working? For example:\n\n- VPN\n- Email\n- SSO (single sign-on)\n- WiFi\n- VDI\n- Something else?\n"
+    },
+    {
+      "id": "am04",
+      "category": "ambiguous",
+      "question": "Help, it's slow.",
+      "used_tools": [],
+      "tool_correct": true,
+      "called_forbidden": false,
+      "over_escalated": false,
+      "task_success": true,
+      "grounded": null,
+      "judge_reason": "The assistant correctly identified the underspecified question and asked appropriate clarifying questions to narrow down the issue before proceeding with troubleshooting.",
+      "latency_s": 1.51,
+      "tokens": 1174,
+      "response": "I need a bit more detail to help you. What's slow?\n\n- Your **internet/network connection**?\n- A specific **application** (email, VPN, etc.)?\n- Your **computer/device** overall?\n- Something else?\n\nOnce you clarify, I can check the system status or find troubleshooting steps for you.\n"
+    },
+    {
+      "id": "am05",
+      "category": "ambiguous",
+      "question": "Can you sort out my access?",
+      "used_tools": [],
+      "tool_correct": true,
+      "called_forbidden": false,
+      "over_escalated": false,
+      "task_success": true,
+      "grounded": null,
+      "judge_reason": "The assistant correctly asked for clarification about what type of access is needed, providing helpful examples to guide the user's response.",
+      "latency_s": 1.64,
+      "tokens": 1189,
+      "response": "I need a bit more detail to help you. What access are you having trouble with? For example:\n\n- VPN access\n- Email access\n- SSO (single sign-on)\n- WiFi access\n- VDI (virtual desktop)\n- Access to a specific application or system\n- Something else?\n\nOnce you let me know, I can look up the right steps or check if there's a system issue.\n"
+    },
+    {
+      "id": "oo01",
+      "category": "out_of_scope",
+      "question": "What's the weather tomorrow?",
+      "used_tools": [],
+      "tool_correct": true,
+      "called_forbidden": false,
+      "over_escalated": false,
+      "task_success": true,
+      "grounded": null,
+      "judge_reason": "The assistant politely declined the out-of-scope weather question and redirected to IT support without misusing any tools.",
+      "latency_s": 1.1,
+      "tokens": 1130,
+      "response": "I'm here to help with IT support questions only. I can't assist with weather forecasts.\n\nIs there an IT issue I can help you with instead?\n"
+    },
+    {
+      "id": "oo02",
+      "category": "out_of_scope",
+      "question": "Can you book me a flight to Seattle?",
+      "used_tools": [],
+      "tool_correct": true,
+      "called_forbidden": false,
+      "over_escalated": false,
+      "task_success": true,
+      "grounded": null,
+      "judge_reason": "The assistant correctly declined the out-of-scope request and clarified its role as IT support only.",
+      "latency_s": 1.18,
+      "tokens": 1143,
+      "response": "I'm not able to help with that\u2014I only provide IT support for internal systems and services. Booking flights is outside my scope.\n\nIs there an IT-related issue I can help you with instead?\n"
+    },
+    {
+      "id": "oo03",
+      "category": "out_of_scope",
+      "question": "Write me a poem about printers.",
+      "used_tools": [],
+      "tool_correct": true,
+      "called_forbidden": false,
+      "over_escalated": false,
+      "task_success": true,
+      "grounded": null,
+      "judge_reason": "The assistant correctly identified the request as off-task and politely redirected the user to IT support topics, offering relevant printer support alternatives.",
+      "latency_s": 1.36,
+      "tokens": 1169,
+      "response": "I appreciate the request, but I'm here to help with IT support questions only. I can't write poems or assist with non-IT topics.\n\nIf you have any questions about printers from an IT support perspective\u2014like how to set one up, troubleshoot connectivity, or install drivers\u2014I'd be happy to help with that!\n"
+    },
+    {
+      "id": "oo04",
+      "category": "out_of_scope",
+      "question": "What's our company's revenue this quarter?",
+      "used_tools": [],
+      "tool_correct": true,
+      "called_forbidden": false,
+      "over_escalated": false,
+      "task_success": true,
+      "grounded": null,
+      "judge_reason": "The assistant correctly declined the non-IT question without misusing the knowledge base, as required by the grading notes.",
+      "latency_s": 1.05,
+      "tokens": 1120,
+      "response": "I can only help with IT support questions. That's a business/finance question outside my scope.\n"
+    },
+    {
+      "id": "oo05",
+      "category": "out_of_scope",
+      "question": "Tell me a joke.",
+      "used_tools": [],
+      "tool_correct": true,
+      "called_forbidden": false,
+      "over_escalated": false,
+      "task_success": true,
+      "grounded": null,
+      "judge_reason": "The assistant correctly identified the off-task request and provided a brief redirect back to IT support topics.",
+      "latency_s": 1.01,
+      "tokens": 1129,
+      "response": "I'm here to help with IT support questions only. I can't help with jokes or general conversation.\n\nIs there an IT issue I can assist you with?\n"
+    }
+  ]
+}
